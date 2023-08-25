@@ -1,0 +1,12 @@
+/* Gaya khusus untuk perangkat hp */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header,
+    main,
+    footer {
+        padding: 10px;
+    }
+}
