@@ -1,0 +1,125 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 10%;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: right;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+    margin-bottom: 10px;
+}
+
+nav li a {
+    display: block;
+    padding: 8px;
+    color: #3a3939;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card .biodata-image {
+    width: 100px;
+    margin: 20px 30px 10px 10px;
+}
+
+.biodata-name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.biodata-name h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1668e2;
+    border-color: #e1e7f0;
+    border-radius: 2px;
+}
+
+.btn-secondary {
+    color: #000;
+    background-color: #ececec;
+    border-color: #00ff55;
+    border-radius: 2px;
+}
+
+.biodata-detail {
+    margin-left: 50px;
+}
+
+.biodata-detail ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.biodata-detail ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 50px;
+}
+
+.biodata-detail span {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
