@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="home.html" target="contentFrame">HOME</a>
+                </li>
+                <li>
+                    <a href="product.html" target="contentFrame">PRODUCT</a>
+                </li>
+                <li>
+                    <a href="gallery.html" target="contentFrame">GALLERY</a>
+                </li>
+                <li>
+                    <a href="blog.html" target="contentFrame">BLOG</a>
+                </li>
+                <li>
+                    <a href="about.html" target="contentFrame">ABOUT</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="informasi" class="informasi">
+        </div>
+        <div class="card">
+            <div class="biodata-image">
+                <img src="user.png" alt="" width="100px">
+            </div>
+            <div class="biodata-name">
+                <h1 id="biodata-name">Alfikri</h1>
+                <p id="biodata-position">Front End Designer</p>
+                <a id="btn-kontak" class="btn btn-primary" href="">Kontak</a>
+                <a class="btn btn-secondary" href="">Resume</a>
+            </div>
+            <div class="biodata-detail">
+                <ul>
+                    <li>
+                        <span>Availability</span>
+                        <span id="biodata-availability">Full Time</span>
+                    </li>
+                    <li>
+                        <span>Usia</span>
+                        <span id="biodata-usia">17</span>
+                    </li>
+                    <li>
+                        <span>Lokasi</span>
+                        <span id="biodata-lokasi">Jakarta, Indonesia</span>
+                    </li>
+                    <li>
+                        <span>Pengalaman</span>
+                        <span id="biodata-pengalaman">2</span>
+                    </li>
+                    <li>
+                        <span>Email</span>
+                        <span id="biodata-email">alfikri.name@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="form-input" class="form-group">
+            <form action="POST">
+                <div>
+                    <label for="name" class="form-label">Nama</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div>
+                    <label for="role">Role</label>
+                    <input type="text" name="role" id="role">
+                </div>
+                <div>
+                    <label for="availability">Availability</label>
+                    <input type="text" name="availability" id="availability">
+                </div>
+                <div>
+                    <label for="age">Age</label>
+                    <input type="text" name="age" id="age">
+                </div>
+                <div>
+                    <label for="lokasi">Lokasi</label>
+                    <input type="text" name="lokasi" id="lokasi">
+                </div>
+                <div>
+                    <label for="years">Years Experience</label>
+                    <input type="text" name="years" id="years">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary" style="display: block;">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
