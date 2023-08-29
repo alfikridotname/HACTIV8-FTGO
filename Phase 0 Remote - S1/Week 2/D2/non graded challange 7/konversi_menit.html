@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Menit</title>
+</head>
+
+<body>
+    <script>
+        let detik = 61;
+
+        const menit = Math.floor(detik / 60);
+        const sisaDetik = detik % 60;
+
+        const waktu = `${menit}:${sisaDetik.toString().padStart(2, "0")}`;
+
+        console.log(`Waktu: ${waktu}`);
+
+    </script>
+</body>
+
+</html>
