@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Javascript</title>
+</head>
+
+<body>
+    <button onclick="hello()">Klik</button>
+    <button id="btn-double">Hello RMT 002 2 Kali</button>
+    <button id="btn-enter">Pointer Enter</button>
+    <button id="btn-hover">Hover</button>
+    <button id="btn-pointer-out">Pointer Out</button>
+
+
+    <script>
+        const btnDouble = document.getElementById('btn-double');
+        const btnEnter = document.getElementById('btn-enter');
+        const btnHover = document.getElementById('btn-hover');
+        const btnPointerOut = document.getElementById('btn-pointer-out');
+
+
+        btnDouble.addEventListener('dblclick', function () {
+            alert('Terimakasih telah klik 2kali');
+        });
+
+        btnEnter.addEventListener('pointerenter', function (e) {
+            e.target.innerHTML = 'Terimakasih telah masuk';
+        });
+
+        btnHover.addEventListener('mouseover', function (e) {
+            e.target.innerHTML = 'Terimakasih telah hover';
+        });
+
+        btnPointerOut.addEventListener('pointerout', function (e) {
+            e.target.innerHTML = 'Terimakasih telah keluar';
+        });
+
+        function hello() {
+            alert('Hello RMT 002');
+        }
+    </script>
+</body>
+
+</html>

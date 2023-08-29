@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Form</title>
+</head>
+
+<body>
+    <div id="info"></div>
+
+    <div>
+        <label for="bahasa">Bahasa</label>
+        <select name="bahasa" id="bahasa">
+            <option value="Indonesia">Indonesia</option>
+            <option value="Inggris">Inggris</option>
+            <option value="Arab">Arab</option>
+        </select>
+
+        <script>
+            const bahasa = document.getElementById('bahasa');
+            const info = document.getElementById('info');
+
+            bahasa.addEventListener('change', function (e) {
+                console.log(e);
+                info.innerHTML = `Anda memilih bahasa ${bahasa.value}`;
+            });
+        </script>
+    </div>
+</body>
+
+</html>
