@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduates</title>
+</head>
+
+<body>
+    <!-- Input:
+    - nama (string)
+    - nilai (number)
+    - absen (number)
+
+    Output:
+    - Tampilkan nama murid dan keterangan (lulus / tidak lulus)
+
+    Algorithm:
+    1. Read nama, nilai, dan absen from user input.
+
+    2. If nilai >= 70 and absen < 5 then
+        Display "Murid [nama] lulus."
+    Else
+        Display "Murid [nama] tidak lulus."
+
+    3. End -->
+
+    <script>
+        const nama = prompt("Masukkan nama murid:");
+        const nilai = parseFloat(prompt("Masukkan nilai murid:"));
+        const absen = parseInt(prompt("Masukkan jumlah absensi murid:"));
+
+        if (nilai >= 70 && absen < 5) {
+            console.log(`Murid ${nama} lulus.`);
+        } else {
+            console.log(`Murid ${nama} tidak lulus.`);
+        }
+
+    </script>
+</body>
+
+</html>
