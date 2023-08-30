@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function ladder(word) {
+            var result = [];
+
+            for (var i = 0; i < word.length; i++) {
+                var currentWord = '';
+                for (var j = 0; j <= i; j++) {
+                    currentWord += word[ j ];
+                }
+                result.push(currentWord);
+            }
+
+            return result;
+        }
+
+        var ladderResult = ladder('TANGGA');
+        ladderResult.sort(function (a, b) {
+            return b.length - a.length;
+        });
+
+        for (var i = 0; i < ladderResult.length; i++) {
+            console.log(ladderResult[ i ]);
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sittingArrangement(person, column) {
+            if (column < 1) {
+                return 'Invalid number';
+            }
+
+            var result = [];
+            var currentIndex = 0;
+
+            for (var i = 0; i < Math.ceil(person.length / column); i++) {
+                var row = [];
+                for (var j = 0; j < column; j++) {
+                    if (currentIndex < person.length) {
+                        row.push(person[ currentIndex ]);
+                        currentIndex++;
+                    } else {
+                        row.push('Kursi Kosong');
+                    }
+                }
+                result.push(row);
+            }
+
+            return result;
+        }
+
+        console.log(sittingArrangement([ 'A', 'B', 'C', 'D' ], 2));
+
+        console.log(sittingArrangement([ 'Joni', 'Dewi', 'Budi', 'Wati' ], 3));
+
+        console.log(sittingArrangement([ 'A', 'B', 'C' ], 0));
+
+    </script>
+</body>
+
+</html>

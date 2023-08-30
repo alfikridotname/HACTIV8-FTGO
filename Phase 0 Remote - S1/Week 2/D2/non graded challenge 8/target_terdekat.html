@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function targetTerdekat(arr) {
+            var indexOfO = arr.indexOf('o');
+            var indexOfX = arr.indexOf('x');
+
+            if (indexOfX === -1) {
+                return 0;
+            }
+
+            var closestDistance = Math.abs(indexOfX - indexOfO);
+
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[ i ] === 'x') {
+                    var distance = Math.abs(i - indexOfO);
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                    }
+                }
+            }
+
+            return closestDistance;
+        }
+
+        console.log(targetTerdekat([ 'x', ' ', 'o', ' ', ' ', 'x' ]));
+        console.log(targetTerdekat([ 'o', ' ', ' ', ' ', 'x', 'x', 'x' ]));
+        console.log(targetTerdekat([ 'o', ' ', ' ', ' ', 'x', 'x', 'x', ' ', 'x' ]));
+
+    </script>
+</body>
+
+</html>

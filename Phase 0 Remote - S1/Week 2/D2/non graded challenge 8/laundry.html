@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Algoritma:
+    Mulai
+    Inisialisasi variabel "jumlah_pakaian" dengan nilai 0.
+    Selama "jumlah_pakaian" kurang dari 20, ulangi langkah berikut:
+    a. Tambahkan 1 ke nilai "jumlah_pakaian".
+    b. Jika "jumlah_pakaian" sama dengan 20, tampilkan "Semua pakaian sudah dimasukkan ke mesin cuci."
+    Tampilkan "Mesin cuci siap untuk dinyalakan."
+    Selesai -->
+    <script>
+        var jumlahPakaian = 20;
+        var pakaianDimasukkan = 0;
+
+        while (pakaianDimasukkan < jumlahPakaian) {
+            pakaianDimasukkan = pakaianDimasukkan + 1;
+        }
+
+        if (pakaianDimasukkan === jumlahPakaian) {
+            console.log("Tombol power mesin cuci menyala.");
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // loop cek setiap 3 angka dari 1 - 100
+        for (var angka = 1; angka <= 100; angka += 3) {
+            var status = angka % 2 === 0 ? "genap" : "ganjil";
+            console.log(angka + " adalah bilangan " + status);
+        }
+
+        // loop cek setiap 5 angka dari 50 - 200
+        for (var angka = 50; angka <= 200; angka += 5) {
+            var faktorPerkalian3 = angka % 3 === 0;
+            var status = faktorPerkalian3 ? "faktor perkalian 3" : "bukan faktor perkalian 3";
+            console.log(angka + " adalah " + status);
+        }
+
+        // loop untuk mengecek setiap 7 angka dari 100 - 200
+        for (var angka = 100; angka <= 200; angka += 7) {
+            if (angka % 8 === 0) {
+                console.log(angka);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
