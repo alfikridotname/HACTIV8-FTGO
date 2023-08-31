@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="crud_karyawan.css">
+</head>
+
+<body>
+    <h1>Daftar Karyawan</h1>
+
+    <!-- Tambah Karyawa -->
+    <button id="btn-tambah-karyawan">Tambah Karyawan</button>
+
+    <div id="form-section">
+        <form>
+            <label for="nama">Nama</label>
+            <input type="text" name="nama" id="nama">
+            <label for="posisi">Posisi</label>
+            <input type="text" name="posisi" id="posisi">
+            <label for="gaji">Gaji</label>
+            <input type="number" name="gaji" id="gaji">
+            <button type="submit" id="btn-tambah">Tambah</button>
+        </form>
+    </div>
+
+    <table id="tabel-karyawan">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Posisi</th>
+                <th>Gaji</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+    <script src="crud_karyawan.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+#form-section {
+    display: none;
+}
+
+#form-section.show {
+    display: block;
+}
