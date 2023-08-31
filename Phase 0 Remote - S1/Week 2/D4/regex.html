@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var foo = /ab+c/;
+        console.log(foo);
+        console.log(typeof foo);
+
+        var bar = new RegExp('ab+c');
+        console.log(bar);
+        console.log(typeof bar);
+
+        var foo1 = "belajar regex";
+        var pola = /regex/;
+
+        console.log(pola.test(foo1));
+        console.log(/Belajar/.test(foo1));
+
+        var tes = "1 jam sama dengan 60 menit, juga sama dengan 3600 detik";
+        var polaTes = /\d+/;
+        console.log(polaTes.exec(tes));
+    </script>
+</body>
+
+</html>

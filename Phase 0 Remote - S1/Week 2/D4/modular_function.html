@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Remove spaces from a text
+        function removeSpaces(text) {
+            return text.split(" ").join("");
+        }
+
+        // Reverse a text
+        function reverseText(text) {
+            return text.split("").reverse().join("");
+        }
+
+        // Encrypt password
+        function updateVowels(text) {
+            let vowels = [ "a", "i", "u", "e", "o" ];
+            let result = "";
+
+            for (let i = 0; i < text.length; i++) {
+                let isVowel = false;
+
+                for (let j = 0; j < vowels.length; j++) {
+                    if (text[ i ] === vowels[ j ]) {
+                        isVowel = true;
+                    }
+                }
+
+                if (isVowel) {
+                    result += "*";
+                } else {
+                    result += text[ i ];
+                }
+            }
+
+            return result;
+        }
+
+        let password = "hactiv 8";
+        let passwordNoSpaces = removeSpaces(password);
+        let passwordReversed = reverseText(passwordNoSpaces);
+        let encryptedPassword = updateVowels(passwordReversed);
+
+        console.log(encryptedPassword);
+    </script>
+</body>
+
+</html>
