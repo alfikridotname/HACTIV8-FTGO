@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Penggunaan push
+        var arr = [ 0, 1, 15, 2, 3 ];
+        arr.push(4);
+        console.log(arr);
+
+        // Penggunaan pop
+        arr.pop();
+        console.log(arr);
+
+        // Penggunaan unshift
+        arr.unshift(-1);
+        console.log(arr);
+
+        // Penggunaan shift
+        arr.shift();
+        console.log(arr);
+
+        // Penggunaan Sort
+        arr.sort();
+        console.log(arr);
+
+        // Penggunaan Sort menggunakan fungsi pembanding
+        arr.sort(function (a, b) {
+            return a - b;
+        });
+
+        console.log(arr);
+
+        // Penggunaan Splice
+        arr.splice(2, 1, 13);
+        console.log(arr);
+
+        // Penggunaan Splice untuk menghapus 2 index pertama
+        arr.splice(0, 2);
+        console.log(arr);
+
+        // Penggunaan Split
+        var str = "hello world";
+        var arrStr = str.split(" ");
+        console.log(arrStr);
+
+    </script>
+</body>
+
+</html>
