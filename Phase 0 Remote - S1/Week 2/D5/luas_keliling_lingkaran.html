@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mencari Luas dan Keliling Lingkaran</title>
+</head>
+
+<body>
+    <h1>Mencari Luas dan Keliling Lingkaran</h1>
+
+    <input type="number" id="jari-jari" placeholder="input jari jari">
+    <button onclick="hitungLuasDanKeliling()">hitung</button>
+
+    <p id="luas"></p>
+    <p id="keliling"></p>
+
+    <script>
+        /* Pseudocode
+        TULIS "Masukkan R lingkaran"
+        BACA R
+
+        HITUNG luas = phi * R * R
+        HITUNG keliling = 2 * phi * R
+
+        CETAK hasil-luas
+        CETAK hasil-keliling
+
+        TULIS hasil-luas
+        TULIS hasil-keliling
+        */
+
+        // Implementasi
+        function hitungLuasDanKeliling() {
+            let r = document.getElementById('jari-jari').value;
+            let luas = 3.14 * r * r;
+            let keliling = 2 * 3.14 * r;
+
+            document.getElementById('luas').innerHTML = `Luas lingkaran dengan jari-jari ${r} adalah ${luas.toFixed(2)}`;
+            document.getElementById('keliling').innerHTML = `Keliling lingkaran dengan jari-jari ${r} adalah ${keliling.toFixed(2)}`;
+        }
+    </script>
+</body>
+
+</html>

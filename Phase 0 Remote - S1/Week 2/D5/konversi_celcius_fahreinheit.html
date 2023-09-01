@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Konversi celcius ke fahreinheit</h3>
+
+    <input type="text" name="celcius" id="celcius">
+    <button onclick="konversi()">Konversi</button>
+
+    <p id="hasil"></p>
+
+    <script>
+        /* Pseudocode
+        TULIS "Masukkan Celcius"
+        BACA Celcius
+
+        HITUNG fahreinheit = (Celcius * 9 / 5) + 32
+
+        CETAK hasil - fahreinheit
+    
+        TULIS hasil - fahreinheit
+        */
+
+        // Implementasi
+        function konversi() {
+            let celcius = document.getElementById('celcius').value
+            let fahreinheit = (celcius * 9 / 5) + 32
+
+            document.getElementById('hasil').innerHTML = `Hasil dari konversi °${celcius} adalah ${fahreinheit.toFixed(2)}F`
+        }
+    </script>
+</body>
+
+</html>
