@@ -54,9 +54,20 @@ function renderTable() {
                 <td>${item.posisi}</td>
                 <td>${item.gaji}</td>
                 <td>
-                    <button>Edit</button>
-                    <button>Hapus</button>
+                    <button onclick="hapus(this)">Hapus</button>
                 </td>
             </tr>`
     });
+}
+
+// Hapus karyawan
+function hapus(prop) {
+    // Ambil index karyawan
+    const index = prop.parentNode.parentNode.firstChild.innerHTML - 1;
+
+    // Hapus karyawan dari array karyawanData
+    karyawanData.splice(index, 1);
+
+    // Render ulang table
+    renderTable();
 }
