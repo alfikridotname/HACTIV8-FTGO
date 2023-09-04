@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function pasanganTerbesar(angka) {
+            let angkaString = angka.toString();
+            let angkaTerbesar = 0;
+            for (let i = 0; i < angkaString.length; i++) {
+                let angkaPasangan = angkaString[ i ] + angkaString[ i + 1 ];
+                if (angkaPasangan > angkaTerbesar) {
+                    angkaTerbesar = angkaPasangan;
+                }
+            }
+            return parseInt(angkaTerbesar);
+        }
+
+        let hasil = pasanganTerbesar(183928);
+        console.log(hasil);
+
+        function duaAngkaTerbesar(angka) {
+            let angkaString = angka.toString();
+            let splitAngka = angkaString.split('');
+
+            splitAngka.sort(function (a, b) {
+                return b - a;
+            });
+
+            let angkaTerbesar = splitAngka[ 0 ] + splitAngka[ 1 ];
+            return parseInt(angkaTerbesar);
+        }
+
+        let hasil1 = duaAngkaTerbesar(183928);
+        let hasil2 = duaAngkaTerbesar(1278345);
+        console.log(hasil1);
+        console.log(hasil2);
+
+        // bubble sort
+        function bubbleSort(angka) {
+            let angkaString = angka.toString();
+            let angkaStringLength = angkaString.length;
+
+            let stop = false;
+
+            for (let i = 0; i < angkaStringLength - 1; i++) {
+                console.log();
+            }
+        }
+
+        // Test Cases
+        let case1 = bubbleSort(2983423);
+        console.log(case1);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Mobil {
+            constructor(merek, harga, warna, bensin, jumlahRoda) {
+                this.merek = merek;
+                this.harga = harga;
+                this.warna = warna;
+                this.bensin = bensin;
+                this.jumlahRoda = jumlahRoda;
+            }
+
+            tampilkanSpesifikasi() {
+                console.log(`Merek: ${this.merek}`);
+                console.log(`Harga: ${this.harga}`);
+                console.log(`Warna: ${this.warna}`);
+                console.log(`Bensin: ${this.bensin}`);
+                console.log(`Jumlah Roda: ${this.jumlahRoda}`);
+            }
+
+            jualMobil() {
+                console.log(`Mobil ${this.merek} sudah dijual`);
+            }
+        }
+
+        const honda = new Mobil('Honda', 100000000, 'Merah', 'Pertamax', 4);
+        honda.tampilkanSpesifikasi();
+        honda.jualMobil();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function tentukanDeretGeometri(arr) {
+            const diff = arr[ 1 ] / arr[ 0 ];
+            for (i = 1; i < arr.length - 1; i++) {
+                let currentDiff = arr[ i + 1 ] / arr[ i ];
+                if (currentDiff !== diff) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        // Test Cases
+        let cases1 = tentukanDeretGeometri([ 1, 3, 9, 27, 81 ]);
+        let cases2 = tentukanDeretGeometri([ 2, 4, 8, 16, 32 ]);
+        let cases3 = tentukanDeretGeometri([ 2, 4, 6, 8 ]);
+        let cases4 = tentukanDeretGeometri([ 2, 6, 18, 54 ]);
+        let cases5 = tentukanDeretGeometri([ 1, 2, 3, 4, 7, 9 ]);
+
+        console.log(cases1);
+        console.log(cases2);
+        console.log(cases3);
+        console.log(cases4);
+        console.log(cases5);
+    </script>
+</body>
+
+</html>

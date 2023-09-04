@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function cariPelaku(str) {
+            let regex = /abc/g;
+            let hasil = str.match(regex);
+            return hasil.length;
+        }
+
+        // TEST CASES
+        console.log(cariPelaku('mabcvabc'));
+        console.log(cariPelaku('abcdabdc'));
+        console.log(cariPelaku('bcabcac'));
+        console.log(cariPelaku('abcabcabc'));
+        console.log(cariPelaku('babcbacabc')); 
+    </script>
+</body>
+
+</html>
