@@ -1,0 +1,18 @@
+Algoritma Luas_Keliling_Lingkaran
+    {Menghitung luas dan keliling untuk ukuran jari-jari tertentu.
+    Algoritma menerima masukan jari-jari lingkaran, menghitung luas dan kelilingnya,
+    dan mencetak luas lingkaran ke peranti keluaran}
+
+    Deklarasi
+        Konstanta phi = 3.14 {nilai konstanta phi}
+        R : real {jari-jari lingkaran}
+        Luas : real {luas lingkaran}
+        Keliling : real {keliling lingkaran}
+
+    Deskripsi
+        READ R
+        CALCULATE phi * R * R ke "Luas"
+        CALCULATE 2 * phi * R ke "Keliling"
+        DISPLAY "Luas"
+        DISPLAY "Keliling"
+Akhir Algoritma

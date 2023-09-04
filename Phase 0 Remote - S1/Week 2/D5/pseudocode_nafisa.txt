@@ -1,0 +1,12 @@
+STORE "phi" with CONST
+STORE "r" with FLOAT
+STORE "LUAS" with FLOAT
+STORE "KELILING" with FLOAT
+
+CALCULATE "phi" times "r" times "r"
+CALCULATE "phi" times "2" times "r"
+
+SET "LUAS" value with calculation result
+DISPLAY "LUAS"
+SET "KELILING" value with calculation result
+DISPLAY "KELILING"
