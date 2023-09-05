@@ -55,11 +55,7 @@ Bookings
 
 Hotel By Destination Name
     
-    SELECT * FROM hotels WHERE destination_id = (
-    
-    SELECT destination_id FROM destinations WHERE destination_name = 'Bali'
-    
-    );
+    SELECT * FROM hotels WHERE destination_id = 1;
     
 Average Rating By Destination Name  
     
@@ -67,8 +63,4 @@ Average Rating By Destination Name
     
     FROM Hotels
     
-    WHERE destination_id = (
-    
-    SELECT destination_id FROM Destinations WHERE destination_name = 'Bali'
-    
-    );
+    WHERE destination_id = 1;
