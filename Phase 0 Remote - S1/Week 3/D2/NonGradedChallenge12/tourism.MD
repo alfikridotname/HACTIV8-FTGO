@@ -27,11 +27,20 @@ Create Table Hotels
       CONSTRAINT `hotels_ibfk_1` FOREIGN KEY (`destination_id`) REFERENCES `destinations` (`id`)
     );
 
+Create Table Guests
+
+    CREATE TABLE `guests` (
+        `id` int(11) NOT NULL AUTO_INCREMENT,
+        `first_name` varchar(255) DEFAULT NULL,
+        `last_name` varchar(255) DEFAULT NULL,
+        PRIMARY KEY (`id`)
+    );
+
 Create Table Bookings
 
     CREATE TABLE `bookings` (
       `id` int(11) NOT NULL AUTO_INCREMENT,
-      `guest_name` varchar(255) NOT NULL,
+      `guest_id` int(11) NOT NULL,
       `check_in_date` date DEFAULT NULL,
       `check_out_date` date DEFAULT NULL,
       `hotel_id` int(11) DEFAULT NULL,
