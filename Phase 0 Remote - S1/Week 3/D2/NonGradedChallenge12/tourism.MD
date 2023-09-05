@@ -53,13 +53,13 @@ Bookings
     
     SELECT * FROM bookings;
 
-Hotel By Destination Name
+Hotel By Destination ID
     
     SELECT * FROM hotels WHERE destination_id = 1;
     
-Average Rating By Destination Name  
+Average Rating By Destination ID  
     
-    SELECT AVG(rating) AS average_rating
+    SELECT ROUND(AVG(rating),2) AS average_rating
     
     FROM Hotels
     
