@@ -73,3 +73,17 @@ Average Rating By Destination ID
     FROM Hotels
     
     WHERE destination_id = 1;
+
+Tampil Booking Details
+
+    SELECT
+        b.id,
+        CONCAT(g.first_name,g.last_name) AS guest,
+        h.hotel_name,
+        h.rating,
+        d.destination_name
+    FROM
+        bookings b
+        INNER JOIN guests g ON b.guest_id = g.id
+        INNER JOIN hotels h ON b.hotel_id = h.id
+        INNER JOIN destinations d ON h.destination_id = d.id
