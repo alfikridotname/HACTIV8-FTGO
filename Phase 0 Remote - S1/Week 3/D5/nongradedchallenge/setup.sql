@@ -37,6 +37,38 @@ CREATE TABLE `lending_transaction` (
   CONSTRAINT `isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `book` (`isbn`)
 );
 
+-- Trigger untuk memastikan setiap buku hanya dapat dipinjamkan kepada satu anggota dalam satu waktu:
+DELIMITER //
+CREATE TRIGGER prevent_multiple_borrowers
+BEFORE INSERT ON lending_transaction
+FOR EACH ROW
+BEGIN
+  DECLARE book_count INT;
+  SELECT COUNT(*) INTO book_count FROM lending_transaction WHERE isbn = NEW.isbn AND date_of_return IS NULL;
+  IF book_count > 0 THEN
+    SIGNAL SQLSTATE '45000'
+    SET MESSAGE_TEXT = 'Buku ini sedang dipinjam oleh anggota lain.';
+  END IF;
+END;
+//
+DELIMITER ;
+
+-- Trigger untuk memastikan anggota dapat meminjamkan tidak lebih dari 5 buku sekaligus:
+DELIMITER //
+CREATE TRIGGER prevent_excessive_borrowing
+BEFORE INSERT ON lending_transaction
+FOR EACH ROW
+BEGIN
+  DECLARE borrowed_count INT;
+  SELECT COUNT(*) INTO borrowed_count FROM lending_transaction WHERE member_id = NEW.member_id AND date_of_return IS NULL;
+  IF borrowed_count >= 5 THEN
+    SIGNAL SQLSTATE '45000'
+    SET MESSAGE_TEXT = 'Anda tidak dapat meminjam lebih dari 5 buku sekaligus.';
+  END IF;
+END;
+//
+DELIMITER ;
+
 -- Insert Data to Table Book
 INSERT INTO `small_library_system`.`book` (`isbn`, `title`, `author`, `publisher`, `year_of_publication`) 
 VALUES 
