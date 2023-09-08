@@ -36,3 +36,24 @@ CREATE TABLE `lending_transaction` (
   CONSTRAINT `member_id_fk` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`),
   CONSTRAINT `isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `book` (`isbn`)
 );
+
+-- Insert Data to Table Book
+INSERT INTO `small_library_system`.`book` (`isbn`, `title`, `author`, `publisher`, `year_of_publication`) 
+VALUES 
+('1292-9598-3449', 'Harry Potter and the Sorcerers Stone', 'J.K. Rowling', 'Andi', 2020),
+('5784-5421-2352', 'To Kill a Mockingbird', 'Harper Lee', 'Andi', 2019),
+('4567-9999-2312', 'The Great Gatsby', 'F. Scott Fitzgerald', 'Andi', 2018);
+
+-- Insert Data to Table Member
+INSERT INTO `small_library_system`.`member` (`frist_name`, `last_name`, `date_of_birth`, `address`)
+VALUES 
+('John', 'Doe', '1990-01-01', 'Jl. Sudirman No. 1'),
+('Jane', 'Doe', '1991-01-01', 'Jl. Sudirman No. 2'),
+('James', 'Doe', '1992-01-01', 'Jl. Sudirman No. 3');
+
+-- Insert Data to Table Lending Transaction
+INSERT INTO `small_library_system`.`lending_transaction` (`member_id`, `isbn`, `date_of_lending`, `date_of_return`, `condition_at_return`)
+VALUES 
+(1, '1292-9598-3449', '2020-01-01', '2020-01-08', 'Good'),
+(2, '5784-5421-2352', '2020-01-01', '2020-01-08', 'Good'),
+(3, '4567-9999-2312', '2020-01-01', '2020-01-08', 'Lost');

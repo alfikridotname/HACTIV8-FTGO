@@ -60,10 +60,8 @@ Berdasarkan persyaratan di atas, kami dapat menentukan tabel berikut di database
 
 ### Relationships
 
- 1. Setiap transaksi peminjaman mengasosiasikan anggota dengan sebuah buku, dan memang demikian
-    dilacak pada Tabel Transaksi Peminjaman.
-2. Tabel Buku melacak status ketersediaan setiap buku, memastikan bahwa sebuah buku hanya dapat dipinjamkan kepada satu anggota dalam satu waktu.
-3. Tabel Anggota menyimpan informasi anggota, termasuk ID Anggota unik mereka.
+1. One-to-One: Setiap buku hanya dapat dipinjamkan kepada satu anggota dalam satu waktu.
+2. One-to-Many: Setiap anggota dapat meminjam beberapa buku sekaligus, namun tidak lebih dari 5 buku sekaligus.
 
 ### Pertimbangan Ke Depannya
 
