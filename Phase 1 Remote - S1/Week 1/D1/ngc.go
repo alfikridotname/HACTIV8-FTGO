@@ -44,10 +44,17 @@ func main() {
 	// Array & Slice 2
 	// Membuat array dengan kapasitas 3 elemen
 	data := []map[string]string{
-		{"name": "Hank", "gender": "M"},
-		{"name": "Heisenberg", "gender": "M"},
-		{"name": "Skyler", "gender": "F"},
+		{"keys": "1", "name": "Hank", "gender": "M"},
+		{"keys": "2", "name": "Heisenberg", "gender": "M"},
+		{"keys": "3", "name": "Skyler", "gender": "F"},
 	}
+
+	// Membuat array dengan append
+	data = append(data, map[string]string{
+		"keys":   "4",
+		"name":   "Marie",
+		"gender": "F",
+	})
 
 	// Menampilkan array awal
 	fmt.Println("Array Awal:")
