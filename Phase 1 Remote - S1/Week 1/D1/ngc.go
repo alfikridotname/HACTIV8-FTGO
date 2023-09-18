@@ -49,11 +49,6 @@ func main() {
 		{"name": "Skyler", "gender": "F"},
 	}
 
-	// Menambahkan data ke dalam array menggunakan append
-	// data = append(data, map[string]string{"name": "Hank", "gender": "M"})
-	// data = append(data, map[string]string{"name": "Heisenberg", "gender": "M"})
-	// data = append(data, map[string]string{"name": "Skyler", "gender": "F"})
-
 	// Menampilkan array awal
 	fmt.Println("Array Awal:")
 	fmt.Println(data)
