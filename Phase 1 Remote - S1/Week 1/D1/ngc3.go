@@ -1,7 +1,9 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 	"sort"
 	"strconv"
 	"strings"
@@ -178,7 +180,10 @@ func xoxo() {
 func xoxoOrder() {
 	var kata string
 	fmt.Print("Masukkan angka-angka (pisahkan dengan spasi): ")
-	fmt.Scan(&kata)
+
+	reader := bufio.NewReader(os.Stdin)
+	kata, _ = reader.ReadString('\n')
+	kata = strings.TrimSpace(kata)
 
 	// Mengubah string menjadi slice of int
 	angkaStr := strings.Fields(kata)
@@ -207,9 +212,7 @@ func xoxoOrder() {
 	// Menampilkan slice yang sudah diurutkan
 	fmt.Println("Slice yang sudah diurutkan dari besar ke kecil:")
 	// Tampilkan semua angka
-	for _, num := range angka {
-		fmt.Printf("%d ", num)
-	}
+	fmt.Println(angka)
 }
 
 func asterikLevel1() {
