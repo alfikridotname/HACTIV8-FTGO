@@ -17,7 +17,6 @@ func main() {
 		}()
 	}
 
-	// Number of tasks
 	numTasks := 3
 
 	fmt.Println("Main application is continuing...")
